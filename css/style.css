@@ -1,0 +1,205 @@
+body {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+}
+
+.game {
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+#info {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    z-index: 1;
+}
+
+.hide {
+    display: none;
+}
+
+/*Road*/
+
+#road {
+    width: 600px;
+    height: 27px;
+    background-image: url('../img/road.png');
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 109px;
+    left: 0px;
+    z-index: 1;
+    animation: roadMov 1.85s infinite linear;
+}
+
+@keyframes roadMov {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -600px;
+    }  
+}
+
+#road_rep {
+    width: 600px;
+    height: 27px;
+    background-image: url('../img/road.png');
+    position: absolute;
+    top: 109px;
+    left: 600px;
+    z-index: 1;
+    animation: roadMovRep 1.85s infinite linear;
+}
+
+@keyframes roadMovRep {
+    0% {
+        left: 600;
+    }
+
+    100% {
+        left: 0px;
+    }  
+}
+
+/*Dino*/
+
+#dino {
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/dino.png');
+    background-size: 40px 40px;
+    position: absolute;
+    top: 89px;
+    z-index: 1;
+}
+
+.jump {
+    animation: dinoJump .4s linear;
+}
+
+@keyframes dinoJump {
+    0% {
+        top: 89px;
+    }
+
+    15% {
+        top: 60px;
+    }
+
+    25% {
+        top: 30px;
+    }
+
+    35% {
+        top: 10px;
+    }
+
+    50% {
+        top: 0px
+    }
+
+    65% {
+        top: 10px;
+    }
+
+    75% {
+        top: 30px;
+    }
+
+    85% {
+        top: 60px;
+    }
+
+    100% {
+        top: 89px;
+    }  
+}
+
+/*Cactus*/
+
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url('../img/cactus.png');
+    background-size: 20px 40px;
+    position: absolute;
+    top: 89px;
+    left: 653px;
+    z-index: 1;
+    animation: cactusMov 2.067s infinite linear;
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 653px;
+
+    }
+
+    100% {
+        left: -20px;
+    }
+}
+
+#cactus_large {
+    width: 60px;
+    height: 40px;
+    background-image: url('../img/cactus_large.png');
+    background-size: 60px 40px;
+    position: absolute;
+    top: 89px;
+    left: 1537px;
+    z-index: 1;
+    animation: cactusLargeMov 5.31s infinite linear;
+}
+
+@keyframes cactusLargeMov {
+    0% {
+        left: 1637px;
+
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+/*Clouds*/
+
+#clouds {
+    width: 400px;
+    height: 56px;
+    background-image: url('../img/clouds.png');
+    background-size: 400px 40px;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 30px;
+    left: 750px;
+    z-index: 0.5;
+    animation: cloudsMov 5s infinite linear;
+}
+
+@keyframes cloudsMov {
+    0% {
+        left: 700px;
+
+    }
+
+    100% {
+        left: -400px;
+    }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 450px;
+    z-index: 1;
+}
